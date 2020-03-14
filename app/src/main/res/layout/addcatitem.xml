@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/itemcatimg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:maxHeight="100dp"
+            android:maxWidth="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:minHeight="100dp"
+            android:minWidth="100dp"
+            android:src="@drawable/ic_launcher_background" />
+
+        <Button
+            android:id="@+id/itemcatedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/itemcatimg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_green_light"
+            android:text="Edit Image" />
+        <EditText
+            android:id="@+id/itemcatname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter equipment category name"
+            android:layout_below="@id/itemcatedit"
+            android:layout_margin="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"/>
+        <Button
+            android:id="@+id/uploaditemcat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/itemcatname"
+            android:text="Upload"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            />
+        <ProgressBar
+            android:id="@+id/progcirclecat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="100dp"
+            android:maxWidth="100dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:layout_centerVertical="true"/>
+</RelativeLayout>
+</ScrollView>
+</RelativeLayout>

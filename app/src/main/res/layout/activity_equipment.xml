@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".trainer">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/itemimageequip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:minHeight="200dp"
+            android:src="@drawable/ic_launcher_background" />
+
+        <Button
+            android:id="@+id/editbtnequip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/itemimageequip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_green_light"
+            android:text="Edit Image" />
+        <EditText
+            android:id="@+id/enameequip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter equipment name"
+            android:layout_below="@id/editbtnequip"
+            android:layout_margin="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"/>
+        <EditText
+            android:id="@+id/edescequip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter the discription"
+            android:layout_below="@id/enameequip"
+            android:inputType="textMultiLine"
+            android:layout_margin="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            android:id="@+id/uploaditemequip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edescequip"
+            android:text="Upload"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            />
+        <ProgressBar
+            android:id="@+id/progcircleequip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="100dp"
+            android:maxWidth="100dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</ScrollView>
+</RelativeLayout>

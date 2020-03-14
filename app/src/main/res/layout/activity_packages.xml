@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".trainer">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/pname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter package name"
+                android:layout_margin="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"/>
+            <EditText
+                android:id="@+id/pdesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter desciption"
+                android:layout_below="@id/pname"
+                android:inputType="textMultiLine"
+                android:layout_margin="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"/>
+            <EditText
+                android:id="@+id/pprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter price"
+                android:inputType="numberDecimal"
+                android:layout_below="@id/pdesc"
+                android:layout_margin="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"/>
+            <Button
+                android:id="@+id/puploaditem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pprice"
+                android:text="Upload"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                />
+            <ProgressBar
+                android:id="@+id/progcirclepackage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="100dp"
+                android:maxWidth="100dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
