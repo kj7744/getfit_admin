@@ -26,9 +26,6 @@ import java.io.InputStream
 import java.util.*
 
 class packages : AppCompatActivity() {
-    //    var image_selected_code: Int = 101
-    var imagesrc = ""
-    //    var inputStream: InputStream? =null
     lateinit var db: DatabaseReference
     lateinit var st: StorageReference
     override fun onCreate(savedInstanceState: Bundle?) {

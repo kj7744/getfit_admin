@@ -1,6 +1,8 @@
 package com.example.getfitadmin
 
 class mem {
+
+
     lateinit var name: String
     lateinit var address: String
     lateinit var dob: String

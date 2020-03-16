@@ -30,6 +30,9 @@ class adminHomepage : AppCompatActivity() {
         notif.setOnClickListener {
             startActivity(Intent(this,sendNotfication::class.java))
         }
+        Queries.setOnClickListener {
+            startActivity(Intent(this,User_queries::class.java))
+        }
 
 
 
