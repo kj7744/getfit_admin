@@ -41,17 +41,15 @@ class packages : AppCompatActivity() {
     private fun validateMenuItem() {
         var name = pname.text.toString().trim()
         var desc = pdesc.text.toString().trim()
-        var price = pprice.text.toString().trim()
 
-
-        if (name.isNotEmpty() and desc.isNotEmpty() and price.isNotEmpty()) {
+        if (name.isNotEmpty() and desc.isNotEmpty())  {
             var a = AlertDialog.Builder(this)
                 .setTitle("Add Package")
                 .setMessage(" Are you sure you want to add this")
                 .setPositiveButton(
                     "Yes"
                 ) { dialog, which ->
-                    uploadMenuItem(name, desc,price)
+                    uploadMenuItem(name,desc)
                     progcirclepackage.visibility = View.VISIBLE
                     dialog.dismiss()
                 }
@@ -67,11 +65,10 @@ class packages : AppCompatActivity() {
         }
     }
 
-    private fun uploadMenuItem(name: String, desc: String,price:String) {
+    private fun uploadMenuItem(name: String, desc: String) {
         var hashMap = hashMapOf(
             "name" to name,
-            "desc" to desc,
-            "price" to price
+            "desc" to desc
         )
         db.child("Admin")
             .child("Package")

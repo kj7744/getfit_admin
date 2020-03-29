@@ -25,9 +25,15 @@ class sendNotfication : AppCompatActivity() {
                 })
             }
             else{
+
                 Toast.makeText(applicationContext,"Please grant permission",Toast.LENGTH_SHORT).show()
 
             }
+        }
+        sendnotifi.setOnClickListener {
+            startActivity(Intent(this,allUsers::class.java).apply {
+                putExtra("action","notif")
+            })
         }
     }
     fun check():Boolean{

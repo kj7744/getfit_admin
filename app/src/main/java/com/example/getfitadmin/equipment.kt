@@ -102,7 +102,7 @@ class equipment : AppCompatActivity() {
                             .setValue(hashMap)
                             .addOnSuccessListener {
                                 Toast.makeText(applicationContext,"Equipment added successfully",Toast.LENGTH_SHORT).show()
-                                progcircle.visibility=View.GONE
+                                progcircleequip.visibility=View.GONE
                             }
                     }
                 }

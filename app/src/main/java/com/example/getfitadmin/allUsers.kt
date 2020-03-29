@@ -1,10 +1,8 @@
 package com.example.getfitadmin
 
-import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.telephony.SmsManager
-import android.text.InputType
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -19,6 +17,7 @@ import java.lang.Exception
 class allUsers : AppCompatActivity() {
     lateinit var db:DatabaseReference
     lateinit var alluserslist:ArrayList<mem>
+    lateinit var alluser:ArrayList<mem>
     lateinit var adapter: allUserAdapter
     var isall_selected=0
     var action=""
@@ -30,6 +29,7 @@ class allUsers : AppCompatActivity() {
         smsManager= SmsManager.getDefault()
         db=FirebaseDatabase.getInstance().reference
         alluserslist= ArrayList()
+        alluser=ArrayList()
         adapter= allUserAdapter(applicationContext,alluserslist)
         allusersrec.layoutManager=LinearLayoutManager(applicationContext)
         allusersrec.adapter=adapter
@@ -41,15 +41,15 @@ class allUsers : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot){
                 if(p0.exists() and p0.hasChildren()){
                     for(ds in p0.children) {
-
                         var m=mem()
                         m.address= ds.child("memdetails").child("address").value.toString()
                         m.bloodgrp= ds.child("memdetails").child("bloodgrp").value.toString()
                         m.dob= ds.child("memdetails").child("dob").value.toString()
-                        m.email= ds.child("memdetails").child("email").value.toString()
+                        m.email= ds.child("email").value.toString()
                         m.gen= ds.child("memdetails").child("gen").value.toString()
-                        m.name= ds.child("memdetails").child("name").value.toString()
+                        m.name= ds.child("username").value.toString()
                         m.phn= ds.child("memdetails").child("phn").value.toString()
+                        m.uid=ds.key.toString()
                         alluserslist.add(m)
                     }
                     adapter.update(alluserslist)
@@ -88,9 +88,44 @@ class allUsers : AppCompatActivity() {
                 alterdialog.show()
             }
             else{
+                val alterdialog=AlertDialog.Builder(this)
+                alterdialog.setTitle("Notifcation Message")
+                val edittext=EditText(applicationContext)
+                edittext.hint="Please enter your message"
+                alterdialog.setView(edittext)
+                alterdialog.setPositiveButton("Send") { dialog, which ->
+                    val msg=edittext.text.toString()
+                    val user = ArrayList<String>()
+                    alluserslist.forEach {
+                        if (it.is_selected == 1) {
+                            user.add(it.uid)
+                        }
+                    }
+                    if (user.isNotEmpty()) {
+
+                        sendNotif(user,edittext.text.toString())
+                    }
+                }
+                alterdialog.setNegativeButton("Cancel"){d,w->
+                    d.cancel()
+                }
+                alterdialog.show()
                     Log.d("notif","notif")
             }
 
+        }
+    }
+
+    private fun sendNotif(
+        user: ArrayList<String>,
+        msg: String
+    ) {
+        val h= hashMapOf(
+            "message" to msg,
+            "Users" to user
+        )
+        db.child("Admin").child("Notification").setValue(h).addOnSuccessListener {
+            Toast.makeText(applicationContext, "SMS is sent", Toast.LENGTH_SHORT).show()
         }
     }
 

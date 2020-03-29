@@ -38,7 +38,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="20dp"
-            android:background="@android:color/holo_green_dark"
+            app:civ_circle_background_color="@android:color/holo_green_dark"
             android:src="@drawable/baseline_done_white_18dp"
             />
     </RelativeLayout>

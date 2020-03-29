@@ -4,14 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/demo2"
     tools:context=".sendNotfication">
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_centerInParent="true"
-    android:text="Send SMS"
-    android:textColor="@android:color/white"
-    android:background="#000"
-    android:id="@+id/sendsms"/>
+
+    <Button
+        android:id="@+id/sendsms"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/login_background"
+        android:text="Send SMS"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/sendnotifi"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/sendsms"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="121dp"
+        android:background="@drawable/login_background"
+        android:text="Send Notifications"
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>

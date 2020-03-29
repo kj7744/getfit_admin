@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:weightSum="10"
     android:orientation="vertical"
-    android:background="@drawable/gym8"
+    android:background="@drawable/gym9"
     tools:context=".adminHomepage">
     <GridLayout
         android:id="@+id/grid"
@@ -28,7 +28,7 @@
             android:layout_rowWeight="1"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:background="@color/cardview_light_background"
+            android:background="@color/cardview_dark_background"
             app:cardElevation="8dp"
             app:cardCornerRadius="8dp"
             android:id="@+id/train">
@@ -74,7 +74,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Equipments"
+                    android:text="Equipment"
                     android:textColor="#000"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -86,7 +86,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="10dp"
             android:layout_columnWeight="1"
             android:layout_marginBottom="16dp"
             android:layout_rowWeight="1"
@@ -101,12 +101,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
+                android:layout_margin="10dp"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fitness Merchandise"
+                    android:text="Fitness Items"
                     android:textColor="#000"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -119,7 +119,7 @@
         <androidx.cardview.widget.CardView
 
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="10dp"
             android:layout_columnWeight="1"
             android:layout_marginBottom="16dp"
             android:background="@color/cardview_light_background"
@@ -151,7 +151,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="10dp"
             android:layout_columnWeight="1"
             android:layout_marginBottom="16dp"
             android:layout_rowWeight="1"
@@ -167,7 +167,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
+                android:layout_margin="8dp"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
@@ -184,7 +184,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="10dp"
             android:layout_columnWeight="1"
             android:layout_marginBottom="16dp"
             android:layout_rowWeight="1"
@@ -206,6 +206,70 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="User Queries"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="16dp"
+            android:layout_rowWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/cardview_light_background"
+
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:id="@+id/remove">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remove elements"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="16dp"
+            android:layout_rowWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/cardview_light_background"
+
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:id="@+id/logout">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
                     android:textColor="#000"
                     android:textSize="18sp"
                     android:textStyle="bold"

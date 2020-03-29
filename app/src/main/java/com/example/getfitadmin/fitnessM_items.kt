@@ -87,7 +87,7 @@ class fitnessM_items : AppCompatActivity() {
         if(name.isNotEmpty() and desc.isNotEmpty() and price.isNotEmpty() and itemcat.isNotEmpty()){
             if(inputStream!=null){
                 var a= AlertDialog.Builder(this)
-                    .setTitle("Add Equipment")
+                    .setTitle("Add Item")
                     .setMessage(" Are you sure you want to add this")
                     .setPositiveButton("Yes"
                     ) { dialog, which ->
@@ -102,7 +102,7 @@ class fitnessM_items : AppCompatActivity() {
                     .show()
             }
             else{
-                Toast.makeText(applicationContext,"Please select equipment picture", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext,"Please select  picture", Toast.LENGTH_SHORT).show()
 
             }
         }
@@ -137,7 +137,7 @@ class fitnessM_items : AppCompatActivity() {
                             .child(UUID.randomUUID().toString())
                             .setValue(hashMap)
                             .addOnSuccessListener {
-                                Toast.makeText(applicationContext,"Equipment added successfully",Toast.LENGTH_SHORT).show()
+                                Toast.makeText(applicationContext,"Item added successfully",Toast.LENGTH_SHORT).show()
                                 progcirclefit.visibility= View.GONE
                             }
                     }

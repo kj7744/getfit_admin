@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RemoveContent">
+
+    <Button
+        android:id="@+id/delet"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/user_pass_button_style"
+        android:text="Delete Trainer" />
+
+    <Button
+        android:id="@+id/deleequi"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/user_pass_button_style"
+        android:text="Delete Equipment" />
+
+    <Button
+        android:id="@+id/delemer"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+
+        android:layout_marginBottom="119dp"
+        android:background="@drawable/user_pass_button_style"
+        android:text="Delete Merchandise Items" />
+
+    <Button
+        android:id="@+id/delepack"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="-201dp"
+        android:layout_marginBottom="118dp"
+        android:background="@drawable/user_pass_button_style"
+        android:text="Delete Packages" />
+</RelativeLayout>

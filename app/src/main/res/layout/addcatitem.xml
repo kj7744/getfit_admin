@@ -26,7 +26,7 @@
             android:layout_marginRight="30dp"
             android:minHeight="100dp"
             android:minWidth="100dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/demo3" />
 
         <Button
             android:id="@+id/itemcatedit"
