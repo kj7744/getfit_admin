@@ -67,7 +67,7 @@ class itemCatDialog: DialogFragment() {
         if(name.isNotEmpty() ){
             if(inputStream!=null){
                 var a= AlertDialog.Builder(context)
-                    .setTitle("Add Equipment")
+                    .setTitle("Add Item")
                     .setMessage(" Are you sure you want to add this")
                     .setPositiveButton("Yes"
                     ) { dialog, which ->
@@ -82,7 +82,7 @@ class itemCatDialog: DialogFragment() {
                     .show()
             }
             else{
-                Toast.makeText(context,"Please select equipment picture", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context,"Please select  picture", Toast.LENGTH_SHORT).show()
 
             }
         }
@@ -113,7 +113,7 @@ class itemCatDialog: DialogFragment() {
                             .child(name)
                             .setValue(hashMap)
                             .addOnSuccessListener {
-                                Toast.makeText(context,"Equipment added successfully",
+                                Toast.makeText(context,"Item added successfully",
                                     Toast.LENGTH_SHORT).show()
                                 progcirclecat.visibility=View.GONE
                                 dismiss()

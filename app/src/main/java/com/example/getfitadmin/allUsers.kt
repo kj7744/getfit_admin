@@ -125,7 +125,7 @@ class allUsers : AppCompatActivity() {
             "Users" to user
         )
         db.child("Admin").child("Notification").setValue(h).addOnSuccessListener {
-            Toast.makeText(applicationContext, "SMS is sent", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "Notification is sent", Toast.LENGTH_SHORT).show()
         }
     }
 
